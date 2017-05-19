@@ -14,9 +14,6 @@ export class HomePage {
 
   ionViewDidLoad(){
 
-  	let school = new School('Lourdes');
-
-  	school.save();
 
   }
 

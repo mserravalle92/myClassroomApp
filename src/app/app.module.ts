@@ -8,6 +8,15 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+// PAGES
+import { Schools } from '../pages/schools/schools';
+import { Courses } from '../pages/courses/courses';
+import { AddSchool } from '../pages/add-school/add-school';
+
+
+//SERVICES
+import { SchoolService } from '../providers/school-service';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -17,7 +26,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    Schools,
+    Courses,
+    AddSchool
   ],
   imports: [
     BrowserModule,
@@ -29,12 +41,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    Schools,
+    Courses,
+    AddSchool
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SchoolService
   ]
 })
 export class AppModule {}

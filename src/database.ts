@@ -89,6 +89,29 @@ export class School implements ISchool{
   	return db.school.add(this);
   }
 
+  static getAll(){
+  	return db.school
+             .reverse()
+             .toArray();
+  }
+
+  static findByID(schoolID:number){
+  	return db.school.get(schoolID);
+  }
+
+    static createFirst(){
+    let school = new School('Mi primer Colegio');
+    return school.save();
+  }
+
+  static count(){
+  	return db.school.count();
+  }
+
+  static first(){
+    return db.school.orderBy("id").limit(1).first();
+  }
+
 }
 
 /********************************************/
